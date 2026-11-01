@@ -1,0 +1,17 @@
+{
+  "name": "Flutter Development",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.flutter",
+        "Dart-Code.dart-code"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa && git clone https://github.com/flutter/flutter.git -b stable --depth 1 ~/flutter && echo 'export PATH=\"$PATH:$HOME/flutter/bin\"' >> ~/.bashrc && source ~/.bashrc",
+  "forwardPorts": [3000, 8080]
+}
